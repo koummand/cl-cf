@@ -1,0 +1,21 @@
+rabit mq
+
+sudo docker run --hostname rabbitmq --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
+
+-d : Exécute le conteneur en arrière-plan.
+--hostname : Définit le nom d'hôte du conteneur.
+--name : Définit le nom du conteneur.
+-p 5672:5672 : Mappe le port 5672 pour la communication avec RabbitMQ.
+-p 15672:15672 : Mappe le port 15672 pour l'interface de gestion.
+4. Accéder à l'interface de gestion
+Accédez à l'interface de gestion de RabbitMQ à l'adresse suivante : http://localhost:15672 (identifiants par défaut : guest / guest).
+
+5. Arrêter et supprimer RabbitMQ
+Pour arrêter le conteneur RabbitMQ :
+
+Copier
+docker stop rabbitmq
+Pour supprimer le conteneur :
+
+Copier
+docker rm rabbitmq
